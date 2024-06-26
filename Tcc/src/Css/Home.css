@@ -1,76 +1,82 @@
 .container {
-    padding: 16px;
-    background-color: #2a2a2a;
-    color: #fff;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .balance {
-    width: 100%;
-    max-width: 400px;
-    background-color: #333;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .balance h2 {
-    margin: 0;
-    font-size: 1.5em;
-    color: #ffcc00;
-  }
-  
-  .balance-amount {
-    margin-top: 10px;
-    font-size: 2.5em;
-    font-weight: bold;
-    color: #ffcc00;
-  }
-  
-  .transactions {
-    width: 100%;
-    max-width: 400px;
-    background-color: #333;
-    padding: 20px;
-    border-radius: 10px;
-  }
-  
-  .transactions h3 {
-    margin: 0;
-    font-size: 1.5em;
-    margin-bottom: 20px;
-    color: #ffcc00;
-  }
-  
-  .transaction {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
-    border-bottom: 1px solid #444;
-  }
-  
-  .transaction:last-child {
-    border-bottom: none;
-  }
-  
-  .transaction-type {
-    display: flex;
-    align-items: center;
-    font-size: 1.1em;
-  }
-  
-  .transaction-amount {
-    font-size: 1.1em;
-  }
-  
-  .transaction-type::before {
-    content: url('../assets/icons/transaction-icon.png');
-    margin-right: 10px;
-  }
-  
+  padding: 16px;
+  background-color: #1c1c1c;
+  color: white;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.balance {
+  text-align: center;
+  background-color: #333;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.balance h2 {
+  font-size: 24px;
+  margin: 0;
+  color: #ffcc00;
+}
+
+.balance p {
+  font-size: 32px;
+  margin: 0;
+  padding: 16px 0;
+  color: white;
+}
+
+.transactions {
+  margin-top: 24px;
+  background-color: #2b2b2b;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.transactions h3 {
+  font-size: 20px;
+  margin-bottom: 16px;
+  text-align: left;
+  color: #ffcc00;
+}
+
+.transaction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2b2b2b;
+  margin-bottom: 8px;
+  border-radius: 8px;
+}
+
+.transaction p {
+  margin: 0;
+  font-size: 16px;
+  color: white;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  background-size: cover;
+}
+
+.transaction.transfer-received .icon {
+  background-image: url('/path/to/transfer-received-icon.svg');
+}
+
+.transaction.transfer-sent .icon {
+  background-image: url('/path/to/transfer-sent-icon.svg');
+}
+
+.transaction.debit .icon {
+  background-image: url('/path/to/debit-icon.svg');
+}
+
+.transaction.credit .icon {
+  background-image: url('/path/to/credit-icon.svg');
+}

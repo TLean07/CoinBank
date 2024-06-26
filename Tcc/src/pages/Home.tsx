@@ -1,7 +1,7 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonContent, IonPage } from '@ionic/react';
 import React, { useEffect, useState } from 'react';
 import { db } from '../Ts/firebase-config';
-import { collection, getDocs } from "firebase/firestore"; 
+import { collection, getDocs } from 'firebase/firestore';
 import '../Css/Home.css';
 import Footer from '../components/footer';
 
@@ -17,14 +17,14 @@ const Home: React.FC = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const querySnapshot = await getDocs(collection(db, "transactions"));
+      const querySnapshot = await getDocs(collection(db, 'transactions'));
       const transList: Transaction[] = [];
       querySnapshot.forEach((doc) => {
         const data = doc.data();
         transList.push({
           id: doc.id,
           type: data.type,
-          amount: data.amount
+          amount: data.amount,
         });
       });
       setTransactions(transList);
@@ -44,9 +44,10 @@ const Home: React.FC = () => {
             <p>R$ {balance.toFixed(2)}</p>
           </div>
           <div className="transactions">
-            <h3>Ultimas Transações:</h3>
+            <h3>Últimas Transações:</h3>
             {transactions.map((transaction) => (
               <div key={transaction.id} className="transaction">
+                <div className={`icon ${transaction.type}`}></div>
                 <p>{transaction.type}</p>
                 <p>R$ {transaction.amount.toFixed(2)}</p>
               </div>

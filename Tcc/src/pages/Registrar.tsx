@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import { IonContent, IonInput, IonButton, IonItem, IonLabel, IonText, IonIcon } from '@ionic/react';
+import { IonContent, IonInput, IonButton, IonText, IonIcon } from '@ionic/react';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../Ts/firebase-config';
 import { useHistory } from 'react-router-dom'; 
 import { personOutline, lockClosedOutline } from 'ionicons/icons';
-
 import '../Css/Registrar.css';
 
 const Registrar: React.FC = () => {

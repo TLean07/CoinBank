@@ -17,7 +17,7 @@ const Footer: React.FC = () => (
         </IonButton>
         <IonButton routerLink="/Invest" className='icon-button'
         style={{ '--background': 'black', '--color': '#131313', '--border': 'none' }}>
-          <img src={Invest} alt="Invest" className='icon' style={{ width: '42px', height: '42px' }} />
+          <img src={Invest} alt="Invest" className='icon' style={{ width: '30px', height: '30px' }} />
         </IonButton>
         <IonButton routerLink="/Profile" className='icon-button'
         style={{ '--background': 'black', '--color': '#131313', '--border': 'none' }}>
