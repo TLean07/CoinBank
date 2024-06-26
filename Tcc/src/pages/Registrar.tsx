@@ -37,7 +37,7 @@ const Registrar: React.FC = () => {
       });
 
       history.push('/login');
-    } catch (error) {
+    } catch (error: any) {
       console.error('Erro ao registrar:', error.message);
       setError(error.message);
     }
