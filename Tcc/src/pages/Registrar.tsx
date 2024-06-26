@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import { IonContent, IonInput, IonButton, IonText, IonIcon } from '@ionic/react';
+import { IonContent, IonInput, IonButton, IonItem, IonLabel, IonText, IonIcon } from '@ionic/react';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { auth, db } from '../Ts/firebase-config';
+import { auth } from '../Ts/firebase-config';
 import { useHistory } from 'react-router-dom'; 
 import { personOutline, lockClosedOutline } from 'ionicons/icons';
-import { doc, setDoc } from 'firebase/firestore';
 
 import '../Css/Registrar.css';
 
@@ -29,13 +28,6 @@ const Registrar: React.FC = () => {
       
       const credential = await createUserWithEmailAndPassword(auth, email, password);
       console.log('Usuário registrado:', credential.user);
-      
-      await setDoc(doc(db, 'users', credential.user.uid), {
-        username,
-        email,
-        createdAt: new Date()
-      });
-
       history.push('/login');
     } catch (error: any) {
       console.error('Erro ao registrar:', error.message);
