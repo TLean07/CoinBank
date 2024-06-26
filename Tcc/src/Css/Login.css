@@ -1,0 +1,35 @@
+.senha-ion-input-custom {
+    border-width: 0;
+    border-radius: 20px;
+    width: 75%;
+    height: auto;
+    color:black;
+    background-color: aliceblue;
+    padding: 20px;
+    margin-bottom: 10px;
+    align-items: center;
+  }
+
+.button-ion-input-custom{
+  --border-width: 0;
+  --border-radius: 0;
+  border-width: 0;
+  border-radius: 0;
+  height: auto;
+}
+
+.confirm{
+  padding: 10px;
+}
+
+.login-container {
+  background-image: url('https://s3-alpha-sig.figma.com/img/5fa6/51f8/505d6122a604e48c2e8e41a37aa75b75?Expires=1720396800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ZRSPwh4vs1wG4YpG3rjlVATb7n6Ed1tcQYuvo-bRolpjMhhWKJOSeq3yqepILQsiOkjZWthootmZRHhUUorXIo~94GEA~wWp1jB9e-7~ffgwLgXkk7sPCp5kaQdqAieTJ9YOeb8jiVJF5DKa4ZEnW~tFUpAQCNLSr6gEEbMTOXSe~vRJMYvVxWLI7~ad1aClR9Mx8t2gCqK6frjYhq9z3XrlaSCrAnVb1fZbdpFVhT4pq-gTk1~650blVoN4smEAVBaECzS15BMoe-ETqMbnaJ~if3EGdBEEgNVZllF6MmdWBsmiLWIYblLWWGfgImyoGIBr~RRO9rVsFJQyEwhqhg__');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

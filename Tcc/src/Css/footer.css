@@ -1,0 +1,20 @@
+.ion-toolbar {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .icon-wrapper {
+    display: flex;
+    background-color: black;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .icon {
+    color: whitesmoke;
+  }
+
+  .icon-button:focus {
+    outline: none; 
+  }
