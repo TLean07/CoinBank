@@ -1,7 +1,7 @@
 import { IonFooter, IonToolbar, IonIcon, IonButton } from '@ionic/react';
 import { home, person, wallet } from 'ionicons/icons';
 import '../Css/footer.css';
-import Invest from '../../public/img.png'; 
+import Invest from 'https://i.ibb.co/nfcN6N4/img.png';
 
 const Footer: React.FC = () => (
   <IonFooter>
